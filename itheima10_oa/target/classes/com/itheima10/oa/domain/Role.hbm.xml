@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.itheima10.oa.domain.Role">
+		<id name="rid" type="java.lang.Long" length="5" column="rid">
+			<generator class="increment"></generator>
+		</id>
+	 <property name="pid"   type="java.lang.Long"  length="5"></property>
+			
+		<property name="name"  type="java.lang.String" length="11"></property>
+	
+		<property name="description" type="java.lang.String" length="50"></property>
+
+		<set name="users" table="user_role">
+			<key> 
+				<column name="rid"></column>
+			</key>
+			<many-to-many class="com.itheima10.oa.domain.User"
+				column="uid"></many-to-many>
+		</set> 
+	</class>
+</hibernate-mapping>
