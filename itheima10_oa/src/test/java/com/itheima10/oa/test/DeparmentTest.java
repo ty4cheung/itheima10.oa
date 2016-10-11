@@ -15,8 +15,8 @@ public class DeparmentTest {
 		ApplicationContext context = new ClassPathXmlApplicationContext("spring/applicationContext.xml");
 		DeparmentService deparmentService = (DeparmentService) context.getBean("deparmentService");
 		Deparment deparment = new Deparment();
-		deparment.setName("维修部");
-		deparment.setDescription("都是男的");
+		deparment.setName("慰安部");
+		deparment.setDescription("都是女的");
 		deparmentService.saveEntry(deparment);
 		
 	}
