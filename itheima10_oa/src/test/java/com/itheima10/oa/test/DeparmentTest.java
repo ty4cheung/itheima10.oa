@@ -19,5 +19,5 @@ public class DeparmentTest {
 		deparment.setDescription("都是女的");
 		deparmentService.saveEntry(deparment);
 		
-	}
+	} 
 }
