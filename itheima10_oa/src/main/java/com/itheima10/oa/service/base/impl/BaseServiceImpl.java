@@ -9,6 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.itheima10.oa.dao.base.BaseDao;
 import com.itheima10.oa.service.base.BaseService;
 
+@Transactional
 public abstract class BaseServiceImpl<T> implements BaseService<T> {
 	
 	public abstract BaseDao<T> getBaseDao();

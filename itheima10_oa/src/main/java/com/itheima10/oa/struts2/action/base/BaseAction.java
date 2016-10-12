@@ -41,5 +41,8 @@ public class BaseAction<T> extends ActionSupport implements ModelDriven<T>{
 	
 	private static final String ACTION2ACTION = "action2action";
 	public String action2action = ACTION2ACTION;
+	
+	private static final String UPDATEUI="updateUI";
+	public String updateUI = UPDATEUI;
 
 }

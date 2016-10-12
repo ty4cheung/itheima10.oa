@@ -14,28 +14,41 @@ import com.itheima10.oa.struts2.action.base.BaseAction;
 import com.opensymphony.xwork2.ActionContext;
 
 @Controller("departmentAction")
-@Scope("prototype")// 不写就会变成单例
-public class DepartmentAction extends BaseAction<Department>{
+@Scope("prototype") // 不写就会变成单例
+public class DepartmentAction extends BaseAction<Department> {
 
-	@Resource(name="departmentService")
+	@Resource(name = "departmentService")
 	private DepartmentService departmentService;
-	
-	public String showAllDepartment(){
+
+	public String showAllDepartment() {
 		List<Department> departments = departmentService.getAllEntry();
 		ActionContext.getContext().put("departments", departments);
 		return listAction;
 	}
-	
-	public String addUI(){
-		
+
+	public String addUI() {
+
 		return addUI;
 	}
-	
-	public String add(){
-		
-		Department  department = new Department();
+
+	public String add() {
+
+		Department department = new Department();
 		BeanUtils.copyProperties(this.getModel(), department);
 		this.departmentService.saveEntry(department);
 		return action2action;
+	}
+
+	public String updateUI() {
+		Department department = this.departmentService.getEntryById(this.getModel().getDid());
+		ActionContext.getContext().getValueStack().push(department);
+		return updateUI;
+	}
+
+	public String update() {
+		Department department = this.departmentService.getEntryById(this.getModel().getDid());
+		BeanUtils.copyProperties(this.getModel(), department);
+		this.departmentService.updateEntry(department);
+		return action2action ;
 	}
 }
