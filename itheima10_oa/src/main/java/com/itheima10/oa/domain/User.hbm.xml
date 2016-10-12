@@ -12,7 +12,7 @@
 		<property name="phone" length="11"></property>
 		<property name="sex" length="2"></property>
 		
-		<many-to-one name="deparment" class="com.itheima10.oa.domain.Deparment" column="did"></many-to-one>
+		<many-to-one name="department" class="com.itheima10.oa.domain.Department" column="did"></many-to-one>
 		
 		<set name="roles" table="user_role">
 			<key>

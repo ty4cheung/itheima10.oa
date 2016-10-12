@@ -2,7 +2,7 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-	<class name="com.itheima10.oa.domain.Deparment">
+	<class name="com.itheima10.oa.domain.Department">
 		<id name="did" type="java.lang.Long" length="5" column="id">
 			<generator class="increment"></generator>
 		</id>

@@ -3,7 +3,7 @@ package com.itheima10.oa.domain;
 import java.io.Serializable;
 import java.util.Set;
 
-public class Deparment implements Serializable{
+public class Department implements Serializable{
 
 	private Long did;
 	private String name;

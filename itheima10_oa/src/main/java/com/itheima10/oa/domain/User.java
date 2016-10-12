@@ -18,7 +18,7 @@ public class User implements Serializable {
 	
 	private Set<Role> roles;
 	
-	private Deparment deparment;
+	private Department department;
 
 	public Long getUid() {
 		return uid;
@@ -77,11 +77,11 @@ public class User implements Serializable {
 		this.roles = roles;
 	}
 
-	public Deparment getDeparment() {
-		return deparment;
+	public Department getDepartment() {
+		return department;
 	}
 
-	public void setDeparment(Deparment deparment) {
-		this.deparment = deparment;
+	public void setDepartment(Department deparment) {
+		this.department = deparment;
 	}
 }
