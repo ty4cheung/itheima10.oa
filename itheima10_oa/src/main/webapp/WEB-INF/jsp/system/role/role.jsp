@@ -19,7 +19,7 @@
 	</table>
 
 	<div class="addnodes" id="rMenu"
-		style="position: absolute; display: none; overflow: hidden;">
+		style="position: absolute; display: none; overflow:hidden;">
 		<ul>
 			<li id="addFolder" style="background: url(${pageContext.request.contextPath}/css/images/jia.jpg) 10px 5px no-repeat;border-bottom:1px solid #8ab2e6;cursor:pointer;" onclick="addTreeNode();">增加节点</li>
 			<li id="addFile" style="background: url(${pageContext.request.contextPath}/css/images/jia.jpg) 10px 5px no-repeat;border-bottom:1px solid #8ab2e6;cursor:pointer;" onclick="removeTreeNode();">删除节点</li>

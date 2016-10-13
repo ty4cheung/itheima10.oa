@@ -27,8 +27,8 @@ var role = {
 	showRMenu:function(event, treeId, treeNode){
 		var y = event.clientY;
 		var x = event.clientX;
-		$("#rMenu ul").show();	
-		$("rMenu").css({"top":y+"px","left":x+"px","display":"block"});
+		$("#rMenu").show();	
+		$("#rMenu").css({"top":y+"px","left":x+"px","display":"block"});
 	},
 	/*
      * 初始化的准备工作
