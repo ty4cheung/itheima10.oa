@@ -13,7 +13,7 @@ public class Role implements Serializable{
 	private Long pid;// 父节点
 	private String name;
 	private String description;
-	
+	private boolean isParent;
 	private Set<User> users;
 
 	public Long getRid() {
@@ -56,5 +56,15 @@ public class Role implements Serializable{
 		this.users = users;
 	}
 
+	public boolean getIsParent() {
+		return isParent;
+	}
+
+	public void setIsParent(boolean isParent) {
+		this.isParent = isParent;
+	}
+	
+
+	
 	
 }

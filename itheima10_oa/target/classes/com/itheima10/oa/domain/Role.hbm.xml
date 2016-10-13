@@ -6,18 +6,19 @@
 		<id name="rid" type="java.lang.Long" length="5" column="rid">
 			<generator class="increment"></generator>
 		</id>
-	 <property name="pid"   type="java.lang.Long"  length="5"></property>
-			
-		<property name="name"  type="java.lang.String" length="11"></property>
-	
+		<property name="pid" type="java.lang.Long" length="5"></property>
+
+		<property name="name" type="java.lang.String" length="11"></property>
+
 		<property name="description" type="java.lang.String" length="50"></property>
 
+		<property name="isParent"></property>
 		<set name="users" table="user_role">
-			<key> 
+			<key>
 				<column name="rid"></column>
 			</key>
 			<many-to-many class="com.itheima10.oa.domain.User"
 				column="uid"></many-to-many>
-		</set> 
+		</set>
 	</class>
 </hibernate-mapping>

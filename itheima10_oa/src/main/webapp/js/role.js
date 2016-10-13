@@ -7,6 +7,11 @@ var role = {
 		root:{ 
 			isRoot:true,
 			nodes:[]
+		},
+		callback:{
+			rightClick:function(){
+				alert("aaaa")
+			}
 		}
 	},
 	loadRoleTree:function(){
@@ -15,6 +20,7 @@ var role = {
 			data:null,
 			success:function(data){
 				$("#roleTree").zTree(role.setting,data);
+		
 			}
 		});
 	}
