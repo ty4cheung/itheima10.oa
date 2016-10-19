@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.annotation.Resource;
 
+import org.springframework.beans.BeanUtils;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
@@ -25,6 +26,19 @@ public class RoleAction extends BaseAction<Role> {
 	public String showAllRole(){
 		List<Role> roles = this.roleService.getAllEntry();
 		ActionContext.getContext().getValueStack().push(roles);
+		return SUCCESS;
+	}
+	
+	public String addRole(){
+		Role role = new Role();
+		BeanUtils.copyProperties(this.getModel(),role);
+		this.roleService.saveEntry(role);
+		ActionContext.getContext().getValueStack().push(role);
+		return SUCCESS;
+	}
+	
+	public String deleteRole(){
+		this.roleService.deleteEntry(this.getModel().getRid());
 		return SUCCESS;
 	}
 }

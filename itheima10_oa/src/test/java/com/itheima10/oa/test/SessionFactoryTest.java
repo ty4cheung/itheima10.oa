@@ -21,4 +21,17 @@ public class SessionFactoryTest {
 		// }
 
 	}
+	
+	@Test
+	public void testMain(){
+		char ch='A';
+		  switch( ch )
+
+		  { 
+		     case 'A' : ch++;
+		     case 'B' : ch++;
+		     case 'C' : ch++;
+		  }
+		  System.out.println(ch);
+	}
 }
